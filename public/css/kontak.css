@@ -1,0 +1,147 @@
+<style>
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-group img {
+      height: 36px;
+    }
+
+    .logo-group span {
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .year {
+      font-size: 14px;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #b40000;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    h2 {
+      color: #b40000;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    p.intro {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    /* FLEX CONTAINER FOR FORM AND MAP SIDE-BY-SIDE */
+    .contact-wrapper {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    /* FORM */
+    form {
+      flex: 1 1 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #b40000;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #7e0000;
+    }
+
+    /* MAP */
+    .map-container {
+      flex: 1 1 400px;
+      min-width: 300px;
+      height: 365px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* CONTACT INFO */
+    .contact-info {
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  color: #333;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; /* agar semua isi default rata kiri */
+}
+
+.contact-info h4 {
+  margin-bottom: 15px;
+  color: #b40000;
+  text-align: center;
+  margin-top: 40px;  ]
+}
+
+.contact-info p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  /* tetap rata kiri sesuai parent */
+}
+
+
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+      .map-container, form {
+        max-width: 100%;
+        height: 300px;
+      }
+      form {
+        height: auto;
+      }
+    }
+  </style>

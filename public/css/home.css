@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* SLIDER STYLES */
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    transition: opacity 1s ease-in-out;
+}
+
+/* Text fade-in animation for each slide */
+.slide .text-white > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.slide .text-white > *:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.slide .text-white > *:nth-child(2) {
+    animation-delay: 0.6s;
+}
+.slide .text-white > *:nth-child(3) {
+    animation-delay: 0.9s;
+}
+.slide .text-white > *:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+/* Navigation Button Hover Effect */
+button#prevSlide,
+button#nextSlide {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button#prevSlide:hover,
+button#nextSlide:hover {
+    transform: scale(1.1);
+}
+
+/* Custom Arrow */
+button#prevSlide::after,
+button#nextSlide::after {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(135deg);
+}
+
+button#nextSlide::after {
+    transform: rotate(-45deg);
+}
+
+/* Section Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* VISI & MISI STYLING */
+section.bg-white {
+    background: #f9f9f9;
+    position: relative;
+    z-index: 5;
+}
+
+section.bg-white h2 {
+    font-size: 1.75rem;
+    color: #b91c1c;
+    border-left: 5px solid #b91c1c;
+    padding-left: 12px;
+}
+
+section.bg-white p,
+section.bg-white li {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    section.bg-white h2 {
+        font-size: 1.5rem;
+    }
+
+    .slider {
+        height: 450px;
+    }
+
+    .slide h1 {
+        font-size: 2rem !important;
+    }
+
+    .slide p {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Background Gradient Overlay (Optional) */
+.slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    z-index: 5;
+    pointer-events: none;
+}
